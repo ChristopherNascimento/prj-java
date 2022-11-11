@@ -26,10 +26,11 @@ public class UsuarioController {
                 Usuario objU = new Usuario();
                 objU.setNome(nome);
                 objU.setEmail(email);
+                uRepository.save(objU);
         return "Salvo";
     }
         @GetMapping("/all")
-        public @ResponseBody Iterable<Usuario> buscarUsuario(){
+        public @ResponseBody Iterable <Usuario> buscarUsuario(){
             return uRepository.findAll();
         }
 
