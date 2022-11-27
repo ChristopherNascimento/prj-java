@@ -11,7 +11,9 @@ public class Usuario {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     private String nome;
-    public int getId() {
+    private String email;
+
+    public Integer getId() {
         return id;
     }
     public void setId(int id) {
@@ -29,6 +31,6 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-    private String email;
+  
     
 }
